@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoothie Order Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <img src="images/smoothie.png" alt="Smoothie" class="header-image">
+        <h1>Order Your Smoothie</h1>
+    </div>
+    <div class="main-content">
+        <form id="smoothie-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="size">Smoothie Size:</label>
+            <select id="size" name="size" required>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+
+            <label for="base">Base Liquid:</label>
+            <select id="base" name="base" required>
+                <option value="water">Water</option>
+                <option value="milk">Milk</option>
+                <option value="juice">Juice</option>
+            </select>
+
+            <fieldset>
+                <legend>Ingredients (Select up to 5):</legend>
+                <label><input type="checkbox" name="ingredients" value="banana"> Banana ($1.00)</label>
+                <label><input type="checkbox" name="ingredients" value="strawberry"> Strawberry ($1.50)</label>
+                <label><input type="checkbox" name="ingredients" value="blueberry"> Blueberry ($2.00)</label>
+                <label><input type="checkbox" name="ingredients" value="pineapple"> Pineapple ($1.00)</label>
+                <label><input type="checkbox" name="ingredients" value="mango"> Mango ($1.50)</label>
+            </fieldset>
+
+            <button type="button" onclick="orderSmoothie()">Order</button>
+        </form>
+
+        <div>
+            <div id="order-summary">
+                <h2>Your Smoothie:</h2>
+            </div>
+            <div id="smoothie-image"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
